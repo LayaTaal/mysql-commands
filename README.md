@@ -17,3 +17,6 @@ mysql -u [username] -h [host] -p [password] [database_name] < SQL file to import
 ```
 mysqldump -u [user] -h [host] -p [db_name] | gzip > [filename_to_compress.sql.gz] 
 ```
+
+**Import zipped database**
+gunzip < [compressed_filename.sql.gz]  | mysql -u [user] -p [password] [databasename]
